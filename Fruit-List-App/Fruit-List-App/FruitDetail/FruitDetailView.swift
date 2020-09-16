@@ -10,15 +10,20 @@ import UIKit
 
 class FruitDetailView: UIViewController, FruitDetailViewProtocol {
     
+    var presenter : FruitDetailPresenterProtocol?
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    
+    
     func showFruitDetail(with fruit: Fruit) {
         // MARK: - Wireframe from detail viewcontroller
     }
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
-
+    
 }

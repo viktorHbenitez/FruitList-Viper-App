@@ -8,13 +8,22 @@
 
 import UIKit
 
-class FruitDetailWireFrame: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class FruitDetailWireFrame: FruitDetailWireFrameProtocol {
+    
+    func createFruitDetail(_ objFruit : Fruit, from view : FruitDetailView){
+        let presenter = FruitDetailPresenter()
+        presenter.objFruit = objFruit
+        view.presenter = presenter
+        view.presenter?.wireframe = FruitDetailWireFrame()
+        view.presenter?.view = view
+        
     }
     
+    
+    func goBackToFruitListView(from view: UIViewController) {
+        
+    }
+    
+
 
 }
