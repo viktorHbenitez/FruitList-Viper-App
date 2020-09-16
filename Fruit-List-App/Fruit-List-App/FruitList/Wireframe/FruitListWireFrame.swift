@@ -7,8 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
 class FruitListWireFrame: FruitListWireFrameProtocol {
+    func pushToFruitDetail(with fruit: Fruit, from view: UIViewController) {
+        
+        
+        
+        
+    }
+    
     
     
     class func createFruitListModule(_ vwFruitList: FruitListView) {

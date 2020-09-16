@@ -7,22 +7,21 @@
 //
 
 import Foundation
-
-
+import UIKit
 
 protocol FruitListViewProtocol : class {
     func updateFruitList(_ objFruitList : [Fruit])
 }
 
 protocol FruitListPresenterProtocol: class {
-    
     // reference of the layer
     var interactor : FruitListInputInteractorProtocol?{get set}
     var view : FruitListViewProtocol? {get set}
     var wireframe : FruitListWireFrameProtocol? {get set}
-    
     // invoke interactor
     func viewDidLoad()
+    
+    func showFruitSelection(with fruit : Fruit, from view : UIViewController)
 }
 
 protocol FruitListInputInteractorProtocol : class {
@@ -36,5 +35,7 @@ protocol FruitListOutputInteractorProtocol : class {
 
 protocol FruitListWireFrameProtocol : class{
     static func createFruitListModule(_ vwFruitList : FruitListView)
+    
+    func pushToFruitDetail( with fruit : Fruit, from view : UIViewController)
 }
 

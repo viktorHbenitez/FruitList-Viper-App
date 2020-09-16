@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 class FruitListPresenter: FruitListPresenterProtocol {
+   
+    
     var interactor: FruitListInputInteractorProtocol?
     weak var view: FruitListViewProtocol?
     var wireframe: FruitListWireFrameProtocol?
@@ -19,6 +22,10 @@ class FruitListPresenter: FruitListPresenterProtocol {
     
     func didLoadFruitList(){
         interactor?.getFruitListFromClient()
+    }
+    
+    func showFruitSelection(with fruit: Fruit, from view: UIViewController) {
+        wireframe?.pushToFruitDetail(with: fruit, from: view)
     }
 }
 

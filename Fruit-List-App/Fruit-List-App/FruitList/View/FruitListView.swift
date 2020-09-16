@@ -46,4 +46,11 @@ extension FruitListView: UITableViewDataSource, UITableViewDelegate {
         return arrFruitList.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // MARK: - View -> Presenter
+        
+        // pass objFruit and viewController
+        presenter?.showFruitSelection(with: arrFruitList[indexPath.row], from: self)
+        
+    }
 }
