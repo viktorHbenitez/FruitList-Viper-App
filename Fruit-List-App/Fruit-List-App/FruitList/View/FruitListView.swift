@@ -22,10 +22,16 @@ class FruitListView: UIViewController, FruitListViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Fruit List App"
+        
+        // 1. We ask the WireFrame or Routing to initialize all our related protocols
         FruitListWireFrame.createFruitListModule(self)
+        
+        // View -> Presenter Loading data
         presenter?.viewDidLoad()
     }
-    
+   
+    // pass data with delegates
     func updateFruitList(_ objFruitList: [Fruit]) {
         arrFruitList = objFruitList
         tblView.reloadData()
@@ -48,9 +54,7 @@ extension FruitListView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // MARK: - View -> Presenter
-        
         // pass objFruit and viewController
         presenter?.showFruitSelection(with: arrFruitList[indexPath.row], from: self)
-        
     }
 }

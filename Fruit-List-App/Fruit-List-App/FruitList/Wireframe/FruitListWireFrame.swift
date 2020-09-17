@@ -12,9 +12,13 @@ import UIKit
 class FruitListWireFrame: FruitListWireFrameProtocol {
     func pushToFruitDetail(with fruit: Fruit, from view: UIViewController) {
         
-        
-        
-        
+        // instance viewController with its WireFrame
+        if let fruitDetailViewController = view.storyboard?.instantiateViewController(identifier: "FruitDetailView") as? FruitDetailView{
+            // intance the layer in the Viper architectural
+            FruitDetailWireFrame.createFruitDetail(fruit, from: fruitDetailViewController)
+            view.navigationController?.pushViewController(fruitDetailViewController, animated: true)
+            
+        }
     }
     
     

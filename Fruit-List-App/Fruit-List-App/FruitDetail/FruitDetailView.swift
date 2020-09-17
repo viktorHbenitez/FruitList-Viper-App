@@ -10,20 +10,26 @@ import UIKit
 
 class FruitDetailView: UIViewController, FruitDetailViewProtocol {
     
+    @IBOutlet private weak var vwImage : UIImageView!
+    @IBOutlet private weak var lblFruitName : UILabel!
+    @IBOutlet private weak var lblFruitVitamin : UILabel!
+    
+    
     var presenter : FruitDetailPresenterProtocol?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        presenter?.viewDidLoad()
     }
-    
-    
     
     func showFruitDetail(with fruit: Fruit) {
-        // MARK: - Wireframe from detail viewcontroller
+        navigationItem.title = fruit.name
+        vwImage.image = UIImage(named: fruit.name)
+        lblFruitName.text = fruit.name
+        lblFruitVitamin.text = fruit.vitamin
     }
     
-    
-    
 }
+
+

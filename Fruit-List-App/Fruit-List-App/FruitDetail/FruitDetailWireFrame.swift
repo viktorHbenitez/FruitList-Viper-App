@@ -10,13 +10,12 @@ import UIKit
 
 class FruitDetailWireFrame: FruitDetailWireFrameProtocol {
     
-    func createFruitDetail(_ objFruit : Fruit, from view : FruitDetailView){
+    class func createFruitDetail(_ objFruit : Fruit, from view : FruitDetailView){
         let presenter = FruitDetailPresenter()
         presenter.objFruit = objFruit
         view.presenter = presenter
         view.presenter?.wireframe = FruitDetailWireFrame()
         view.presenter?.view = view
-        
     }
     
     
@@ -24,6 +23,10 @@ class FruitDetailWireFrame: FruitDetailWireFrameProtocol {
         
     }
     
+    
+    deinit {
+        print("FruitDetailWireFrame removed")
+    }
 
 
 }

@@ -98,13 +98,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fruit name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsQ-9D-SJY">
-                                <rect key="frame" x="166" y="598" width="82" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="158.5" y="598" width="97.5" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitamin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yR5-j5-LtO">
-                                <rect key="frame" x="178" y="627" width="58" height="21"/>
+                                <rect key="frame" x="178" y="629" width="58" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -122,9 +122,9 @@
                         <viewLayoutGuide key="safeArea" id="7kb-mn-wa4"/>
                     </view>
                     <connections>
-                        <outlet property="fruitImage" destination="sZ1-hI-3Q2" id="H5q-7M-FBn"/>
-                        <outlet property="fruitNameLbl" destination="TsQ-9D-SJY" id="Ftf-rg-Eyy"/>
-                        <outlet property="vitaminLbl" destination="yR5-j5-LtO" id="0qH-8B-n2I"/>
+                        <outlet property="lblFruitName" destination="TsQ-9D-SJY" id="tqk-8w-o9r"/>
+                        <outlet property="lblFruitVitamin" destination="yR5-j5-LtO" id="JCa-Kk-wo0"/>
+                        <outlet property="vwImage" destination="sZ1-hI-3Q2" id="dDR-Kx-aL6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRn-Es-NOY" userLabel="First Responder" sceneMemberID="firstResponder"/>

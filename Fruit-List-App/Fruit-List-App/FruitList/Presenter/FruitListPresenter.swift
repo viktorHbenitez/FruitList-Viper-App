@@ -11,7 +11,7 @@ import UIKit
 
 class FruitListPresenter: FruitListPresenterProtocol {
    
-    
+    // Reference of the layers
     var interactor: FruitListInputInteractorProtocol?
     weak var view: FruitListViewProtocol?
     var wireframe: FruitListWireFrameProtocol?

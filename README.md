@@ -3,14 +3,22 @@
 ### Description: 
 A small app that will show a list of fruit that we will have in our diet plan with the vitamins that they provide to us  
 
+
+
+![Version 2 ](https://github.com/viktorHbenitez/FruitList-Viper-App/blob/master/sketch/FruitListApp.jpg)    
+
+
 ![Version 1](https://github.com/viktorHbenitez/FruitList-Viper-App/blob/master/sketch/version1.png)  
 
-## Guide steps: 
+
+    
+
+### Guide steps FruitListView: 
 1. Fruit List View
    - Get data from output interactor and show in the tableviewController
 
 2. Fruit Presenter
-   - referecen to view, interactor, wireframe
+   - reference to view, interactor, wireframe
    - invoke method to get fruit from interactor
    - implement output fruit interactor and pass to view
    
@@ -24,6 +32,20 @@ A small app that will show a list of fruit that we will have in our diet plan wi
 4. WireFrame
    - Init list-View
    - push Detail ViewController
+
+
+
+### Guide steps FruiDetailView:  
+
+1. Fruit Detail View
+    - Show Fruit Detail From Delegate 
+    - reference to the Presenter layer
+
+2. Fruit Detail Presenter
+    - Reference to view, wireframe 
+
+3. Fruit Detail Wireframe 
+    - Instance and initialize Fruit Detail View Presenter
 
 
 ### References:
